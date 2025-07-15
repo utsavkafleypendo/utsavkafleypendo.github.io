@@ -36,19 +36,33 @@
                 color: black;
             }
         </style>
-        
+
         <script>
-            (function(apiKey){
-                (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
-                v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
-                    o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
-                    y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo-atlas.pendo-dev.com/agent/static/'+apiKey+'/pendo.js';
-                    z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+            (function (apiKey) {
+                (function (p, e, n, d, o) {
+                    var v, w, x, y, z;
+                    o = p[d] = p[d] || {};
+                    o._q = o._q || [];
+                    v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track'];
+                    for (w = 0, x = v.length; w < x; ++w)
+                        (function (m) {
+                            o[m] =
+                                o[m] ||
+                                function () {
+                                    o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0)));
+                                };
+                        })(v[w]);
+                    y = e.createElement(n);
+                    y.async = !0;
+                    y.src = 'https://cdn.pendo-atlas.pendo-dev.com/agent/static/' + apiKey + '/pendo.js';
+                    z = e.getElementsByTagName(n)[0];
+                    z.parentNode.insertBefore(y, z);
+                })(window, document, 'script', 'pendo');
             })('ba1443fd-2b89-4180-7ac9-9415d1893b4d');
 
             pendo.initialize({
                 visitor: {
-                    id: 'test_visitor' 
+                    id: 'test_visitor'
                 },
 
                 account: {
@@ -56,27 +70,31 @@
                 }
             });
 
-            const user = {ID:'u1', email:'someone@example.com', full_name:'Some One', role:'user',creationDate:'12/12/24'}
-            const account = {ID:'a1', name:'acc_name', is_paying:true, monthly_value:1000, subscriptionCost:0}
+            const user = {
+                ID: 'u1',
+                email: 'someone@example.com',
+                full_name: 'Some One',
+                role: 'user',
+                creationDate: '12/12/24'
+            };
+            const account = { ID: 'a1', name: 'acc_name', is_paying: true, monthly_value: 1000, subscriptionCost: 0 };
 
             pendo.identify({
-            visitor: {
-                id: user.ID,
-                email: user.email,
-                full_name: user.full_name,
-                role: user.accessLevel,
-                creationDate: user.creationDate
-            },
-            account: {
-                id: account.ID,
-                name: account.name,
-                is_paying: account.is_paying,
-                monthly_value: account.monthly_value,
-                planLevel: account.subscriptionCost,
-            }
+                visitor: {
+                    id: user.ID,
+                    email: user.email,
+                    full_name: user.full_name,
+                    role: user.accessLevel,
+                    creationDate: user.creationDate
+                },
+                account: {
+                    id: account.ID,
+                    name: account.name,
+                    is_paying: account.is_paying,
+                    monthly_value: account.monthly_value,
+                    planLevel: account.subscriptionCost
+                }
             });
-
-
         </script>
     </head>
     <body>
@@ -104,7 +122,7 @@
                 <section>
                     <h1>Title</h1>
                     <div>
-                        <img src="./sumup-MIwL9vwKWsU-unsplash.jpg" alt="Main img" height="400px" />
+                        <img src="https://picsum.photos/200/300" alt="Main img" height="400px" />
                     </div>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue augue ac molestie
@@ -155,7 +173,19 @@
 
                         <label for="file">Upload file</label>
                         <input id="file" type="file" />
-                        <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/1059471/sp/105947100/embedIframeJs/uiconf_id/33618202/partner_id/1059471?iframeembed=true&playerId=kaltura_player&entry_id=1_9vki2x32&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_s2bqu0u1" width="400" height="285" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Captions Demo - Yochai Benkler on the new open-source economics"></iframe>
+                        <iframe
+                            id="kaltura_player"
+                            src="https://cdnapisec.kaltura.com/p/1059471/sp/105947100/embedIframeJs/uiconf_id/33618202/partner_id/1059471?iframeembed=true&playerId=kaltura_player&entry_id=1_9vki2x32&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_s2bqu0u1"
+                            width="400"
+                            height="285"
+                            allowfullscreen
+                            webkitallowfullscreen
+                            mozAllowFullScreen
+                            allow="autoplay *; fullscreen *; encrypted-media *"
+                            sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation"
+                            frameborder="0"
+                            title="Captions Demo - Yochai Benkler on the new open-source economics"
+                        ></iframe>
                         <input type="button" />
                         <input type="submit" />
                     </form>
