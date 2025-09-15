@@ -4,177 +4,61 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Utsav Pendo Test</title>
         <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
         <script src="script.js"></script>
     </head>
     <body>
-        <header class="header">
-            <div class="header-container">
-                <div class="logo">
-                    <h1>innit?</h1>
-                </div>
-                <nav class="nav">
-                    <a href="#" class="nav-link">Home</a>
-                    <a href="#" class="nav-link">About</a>
-                    <a href="#" class="nav-link">Contact</a>
-                </nav>
-            </div>
-        </header>
-
         <main class="main">
             <div class="container">
-                <div class="content-grid">
-                    <div class="left-column">
-                        <div class="card image-card">
-                            <div class="card-header">
-                                <h3>Featured Image</h3>
-                            </div>
-                            <div class="card-content">
-                                <div class="image-wrapper">
-                                    <img src="https://picsum.photos/400/300" alt="Featured image" />
-                                </div>
-                            </div>
+                <div class="tiny-form pendo-form">
+                    <form id="pendo-config" class="form">
+                        <div class="form-group">
+                            <input id="apiKey" type="text" class="form-input" placeholder="API Key" />
                         </div>
-                        
-                        <div class="card quote-card">
-                            <div class="card-header">
-                                <h3>Featured Quote</h3>
-                                <button class="refresh-quote-btn btn btn-small">New Quote</button>
+                        <div class="form-section">
+                            <h4>Visitor</h4>
+                            <div class="form-group">
+                                <input id="visitorId" type="text" class="form-input" placeholder="Visitor ID" />
                             </div>
-                            <div class="card-content">
-                                <blockquote class="featured-quote">
-                                    <p>"Loading inspirational quote..."</p>
-                                    <cite>— Quote Generator</cite>
-                                </blockquote>
+                            <div class="form-group">
+                                <input id="visitorEmail" type="email" class="form-input" placeholder="Visitor Email" />
+                            </div>
+                            <div class="form-group">
+                                <input id="visitorName" type="text" class="form-input" placeholder="Visitor Name" />
                             </div>
                         </div>
-                    </div>
-
-                    <div class="card form-card">
-                        <div class="card-header">
-                            <h3>Interactive Form</h3>
-                            <p class="card-subtitle">Fill out the form below to test various input types</p>
+                        <div class="form-section">
+                            <h4>Account</h4>
+                            <div class="form-group">
+                                <input id="accountId" type="text" class="form-input" placeholder="Account ID" />
+                            </div>
+                            <div class="form-group">
+                                <input id="accountName" type="text" class="form-input" placeholder="Account Name" />
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <form id="form" class="form">
-                                <div class="form-group">
-                                    <label for="name" class="form-label">Full Name</label>
-                                    <input id="name" type="text" class="form-input" placeholder="Enter your full name" />
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="email" class="form-label">Email Address</label>
-                                    <input id="email" type="email" class="form-input" placeholder="Enter your email" />
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="password" class="form-label">Password</label>
-                                    <input id="password" type="password" class="form-input" placeholder="Enter your password" />
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="phone" class="form-label">Phone Number</label>
-                                    <input id="phone" type="tel" class="form-input" placeholder="Enter your phone number" />
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="date" class="form-label">Date</label>
-                                    <input id="date" type="date" class="form-input" />
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="range" class="form-label">Range Slider</label>
-                                    <input id="range" type="range" class="form-range" min="0" max="100" value="50" />
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="file" class="form-label">Upload File</label>
-                                    <input id="file" type="file" class="form-input file-input" />
-                                </div>
-
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary">Submit Form</button>
-                                    <button type="button" class="btn btn-secondary">Reset</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                        <button type="submit" class="btn">Update Pendo</button>
+                    </form>
                 </div>
-
-                <div class="media-section">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Media Content</h3>
-                            <p class="card-subtitle">Interactive video player</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="video-wrapper">
-                                <iframe
-                                    id="kaltura_player"
-                                    src="https://cdnapisec.kaltura.com/p/1059471/sp/105947100/embedIframeJs/uiconf_id/33618202/partner_id/1059471?iframeembed=true&playerId=kaltura_player&entry_id=1_9vki2x32&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_s2bqu0u1"
-                                    allowfullscreen
-                                    webkitallowfullscreen
-                                    mozAllowFullScreen
-                                    allow="autoplay *; fullscreen *; encrypted-media *"
-                                    sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation"
-                                    frameborder="0"
-                                    title="Captions Demo - Yochai Benkler on the new open-source economics"
-                                ></iframe>
+                <div class="flashcard-section">
+                    <div class="flashcard">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h3>Pendo Integration</h3>
+                                <p>Click to learn more about Pendo setup</p>
+                            </div>
+                            <div class="flashcard-back">
+                                <h3>Quick Guide</h3>
+                                <ul>
+                                    <li>Enter your API key from Pendo dashboard</li>
+                                    <li>Add visitor details for tracking</li>
+                                    <li>Include account information</li>
+                                    <li>Click Update to initialize Pendo</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
-
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Press</a></li>
-                            <li><a href="#">Blog</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4>Products</h4>
-                        <ul>
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">API</a></li>
-                            <li><a href="#">Documentation</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4>Support</h4>
-                        <ul>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Community</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Security</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4>Legal</h4>
-                        <ul>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Cookie Policy</a></li>
-                            <li><a href="#">GDPR</a></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy; 2024 Utsav Test Platform. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
     </body>
 </html>
